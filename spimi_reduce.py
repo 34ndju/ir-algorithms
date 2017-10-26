@@ -7,7 +7,9 @@ test_tokens = [
 {"term": "insatiable", "docID": 4}
 ]
 
-def spimi_invert(tokens):
+# previously mapped
+
+def spimi_reduce(tokens):
     output_file = {}
     dictionary = {}
 
@@ -28,5 +30,5 @@ def spimi_invert(tokens):
         token_index+=1
     return dictionary
 
-print spimi_invert(test_tokens)
+print spimi_reduce(test_tokens)
 # {'insatiable': [1, 4], 'herring': [2], 'apple': [1, 2], 'incredulous': [3]}
