@@ -1,10 +1,3 @@
-'''
-Doc1 Doc2 Doc3
-car 27 4 24
-auto 3 33 0
-insurance 0 33 29
-best 14 0 17
-'''
 from spimi_map_reduce import *
 import math
 
