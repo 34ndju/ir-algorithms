@@ -1,4 +1,4 @@
-from spimi_map_reduce import *
+from spimi_map_reduce import spimi_map, spimi_reduce
 import math
 
 def get_idf(term, inverted_index, collection_size):
@@ -42,11 +42,13 @@ collection.append("seeking is not always believing")
 collection.append("we must use time creatively")
 collection.append("a lie cannot live")
 collection.append("a right delayed is a right denied")
+collection.append("if this is a holder for is and it is long then it really is made of is")
 
-ranked_retrieval(["right", "is"], collection)
+ranked_retrieval(["is", "right"], collection)
 '''
 docID: 1, Text: the time is always right to do what is right
 docID: 6, Text: a right delayed is a right denied
+docID: 7, Text: if this is a holder for is and it is long then it really is made of is
 docID: 0, Text: injustice anywhere is an injustice everywhere
 docID: 3, Text: seeking is not always believing
 docID: 2, Text: we must build dikes of courage to hold back the flood of fear
