@@ -8,12 +8,11 @@ def get_idf(term, inverted_index, collection_size):
         seen.add(doc)
     return math.log(float(collection_size) / len(seen), log_base)
 
-def get_tf(term, inverted_index, docID):
+def get_tf(term, doc):
     freq = 0
-    for doc in inverted_index[term]:
-        if doc == docID:
-            freq += 1
-    return freq
+    for word in doc.strip().split(""):
+        print word
+    return 1#freq
 
 def ranked_retrieval(terms, collection):
     mapped_collection = spimi_map(collection)
