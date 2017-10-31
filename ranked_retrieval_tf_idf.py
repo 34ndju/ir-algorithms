@@ -10,9 +10,10 @@ def get_idf(term, inverted_index, collection_size):
 
 def get_tf(term, doc):
     freq = 0
-    for word in doc.strip().split(""):
-        print word
-    return 1#freq
+    for word in doc.strip().split():
+        if word == term:
+            freq += 1
+    return freq
 
 def ranked_retrieval(terms, collection):
     mapped_collection = spimi_map(collection)
@@ -25,7 +26,7 @@ def ranked_retrieval(terms, collection):
 
     for term in terms:
         for docID, document in enumerate(collection):
-            scores[docID][1] += get_tf(term, inverted_index, docID) * get_idf(term, inverted_index, len(collection))
+            scores[docID][1] += get_tf(term, document) * get_idf(term, inverted_index, len(collection))
 
     sorted_scores = sorted(scores, key=lambda k: k[1], reverse=True)
     for sorted_score in sorted_scores:
@@ -44,7 +45,7 @@ def run():
 
     ranked_retrieval(["is", "right"], collection)
 
-run()
+#run()
 '''
 docID: 1, Text: the time is always right to do what is right
 docID: 6, Text: a right delayed is a right denied
