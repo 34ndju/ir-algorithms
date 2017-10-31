@@ -29,19 +29,21 @@ def spimi_reduce(tokens):
         token_index+=1
     return dictionary
 
-collection = []
-collection.append("injustice anywhere is an injustice everywhere")
-collection.append("the time is always right to do what is right")
-collection.append("we must build dikes of courage to hold back the flood of fear")
-collection.append("seeking is not always believing")
-collection.append("we must use time creatively")
-collection.append("a lie cannot live")
-collection.append("a right delayed is a right denied")
+def run():
+    collection = []
+    collection.append("injustice anywhere is an injustice everywhere")
+    collection.append("the time is always right to do what is right")
+    collection.append("we must build dikes of courage to hold back the flood of fear")
+    collection.append("seeking is not always believing")
+    collection.append("we must use time creatively")
+    collection.append("a lie cannot live")
+    collection.append("a right delayed is a right denied")
 
-mapped_collection = spimi_map(collection)
+    mapped_collection = spimi_map(collection)
 
-print spimi_reduce(mapped_collection)
+    print spimi_reduce(mapped_collection)
 
+#run()
 '''
 {'right': [1, 1, 6, 6], 'is': [0, 1, 1, 3, 6], 'back': [2], 'an': [0],
 'fear': [2], 'lie': [5], 'what': [1], 'to': [1, 2], 'flood': [2], 'live': [5],
