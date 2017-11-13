@@ -12,9 +12,6 @@ def get_champions_set_for_term(term, r, collection):
 
     return champions_set
 
-
-#print and_of_tuple_list([1],[1,2])
-
 def get_champions_list(terms, k, r, collection):
     complete_champion_set = get_champions_set_for_term(terms[0], r, collection)
     complete_champion_list = []
