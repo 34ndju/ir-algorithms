@@ -67,11 +67,14 @@ def run_with_query(query):
 
 
 if __name__ == '__main__':
-    run_with_query("venture capitalist and internet entrepreneur")
+    #run_with_query("venture capitalist and internet entrepreneur")
     # ['Peter Thiel', 'Max Levchin', 'Jen-Hsun Huang', 'Donald Glover', 'Kanye West', 'Eminem', 'J Cole', 'J.K. Rowling', 'Jiawei Han']
 
-    run_with_query("controversy")
+    #run_with_query("controversy")
     # ['Kanye West', 'Peter Thiel', 'Eminem', 'J Cole', 'Max Levchin', 'Jen-Hsun Huang', 'J.K. Rowling', 'Donald Glover', 'Jiawei Han']
 
-    run_with_query("research")
+    #run_with_query("research")
     # ['Jiawei Han', 'Peter Thiel', 'J.K. Rowling', 'J Cole', 'Max Levchin', 'Eminem', 'Jen-Hsun Huang', 'Donald Glover', 'Kanye West']
+
+
+    run_with_query("Grammys")
